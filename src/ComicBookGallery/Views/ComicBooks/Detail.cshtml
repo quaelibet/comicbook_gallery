@@ -28,10 +28,18 @@
             <h3>Description:</h3>
             @Html.Raw(description)
         </div>
-        <div>
-            <h3>Artisis:</h3>
-            @*@artists*@
-        </div>
+        @if (artists.Any())
+        {
+            <div>
+                <h3>Artisis:</h3>
+                <ul>
+                    @foreach (var artist in artists)
+                    {
+                        <li>@artist</li>
+                    }
+                </ul>
+            </div>
+        }
     </section>
 </body>
 </html>
